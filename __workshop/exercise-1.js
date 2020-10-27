@@ -19,8 +19,8 @@ const sortWords = (array) => {
 
 const textTransform = async (array) => {
   try {
-    await makeAllCaps(array);
-    const result = await sortWords(array);
+    const cap = await makeAllCaps(array);
+    const result = await sortWords(cap);
     console.log(result);
   } catch (e) {
     console.log("Error", e);
